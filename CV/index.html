@@ -210,6 +210,7 @@
               <li data-filter=".filter-web">NLP-SO Search Engine</li>
               <li data-filter=".filter-web1">Weather Forecasting</li>
               <li data-filter=".filter-web2">Traffic Congestion</li>
+	      <li data-filter=".filter-app1">Image Recommendation System</li>
               <li data-filter=".filter-web3">Landmark Recognition</li>
             </ul>
           </div>
@@ -505,6 +506,53 @@
             <h4><b>AWS Pipeline - Project Architecture & Data Flow</b></h4>
             <p>The aim of the project is to make of aws services like Amazon sagemaker, s3, e2 server, etc. The below data flow describes the end to end services used to build this project using AWS services.</p>
             <img src="assets/img/traffic/AWS_pipeline.JPG" class="img-fluid" alt="">
+          </div>
+	  <div class="portfolio-item filter-app1">
+            <h3>SnapFash - E-commerce Fashion Recommendation System</h3>
+            <h6>Jan – May 2021</h6>
+            <h4><b>Short Description</b></h4>
+            <p>Built a fashion recommendation system to retrieve similar images using object detection and similarity techniques</p>
+            <p><b>Skills/Concepts –</b>  Yolo v4, Cosine Similarity, VGG architecture, Inception Resnet</p>
+            <p><b>git link: </b><a href="https://github.com/gayuc07/ECommerce_Fashion_Recommendation_System">https://github.com/gayuc07/ECommerce_Fashion_Recommendation_System</a></p>
+            <video controls poster="play.jpg" onclick="this.play();">  <source src="assets/img/snapfash_demo.mp4" type="video/mp4"></video>
+            <h4><b>Introduction</b></h4>
+            <p>E-commerce fashion recommendations are highly sensitive to user interpretation of the product on the search engine. Text-based input from customers can be vague, and lead to irrelevant suggestions. An image-based recommendation system can better identify customer wants, thereby boosting sales for e-commerce vendors.</p>
+            <h4><b>Dataset</b></h4>
+            <br>
+			<p>The SnapFash architecture utilizes two primary datasets</p>
+			<ul>DeepFashion Dataset</ul>
+			<ul>e-commerce data - Flipkart and Myntra</ul>
+            <h5><b>DeepFashion Dataset</b></h5>
+            <p>The DeepFashion database, which is a large scale fashion/clothes database with over 800,000 diverse fashion images, is a publicly available dataset. DeepFashion contains 50 categories of clothing, with each clothing image containing information on the category (class) and bounding box coordinates which specify exactly where in the image the item of clothing is located, also known as the region of interest. This dataset is used for training the object detection model that recognizes the type and location of the garment in the input image.</p>
+            <p>Source: http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html</p>
+            <h5><b>Ecommerce Dataset</b></h5>
+            <p>The e-commerce data from Flipkart and Myntra was obtained from Kaggle and contains information on a wide array of retail products on the platforms. Combined, there are over 70,000 total products in this e-commerce dataset with information like product type, product url, product’s image urls, as well as other metadata. This dataset is used as a static database and product recommendations for the user are drawn from here.</p>
+            <p>Source: Kaggle - https://www.kaggle.com/PromptCloudHQ/flipkart-products</p>
+            <h4><b>Methodology</b></h4>
+			<br>
+			<h5><b>Workflow - Development</b></h5>
+            <img src="assets/img/recom_sys/dev_workflow.png" class="img-fluid" alt="">
+			<br>
+			<h5><b>Workflow - Application</b></h5>
+            <img src="assets/img/recom_sys/app_work_flow.JPG" class="img-fluid" alt="">
+			<br>
+			<h4><b>Results</b></h4>
+			<h5><b>Object Detection Phase</b></h5>
+			<img src="assets/img/recom_sys/obj_res.JPG" class="img-fluid" alt="">
+			<br>
+			<h5><b>Feature Extraction</b></h5>
+			<img src="assets/img/recom_sys/feat_res.JPG" class="img-fluid" alt="">
+			<br>
+			<h5><b>Similarity Scoring</b></h5>
+			<br>
+			<img src="assets/img/recom_sys/ex_1.JPG" class="img-fluid" alt="">
+			<br>
+			<img src="assets/img/recom_sys/ex_2.JPG" class="img-fluid" alt="">
+			<br>
+			<img src="assets/img/recom_sys/ex_3.JPG" class="img-fluid" alt="">
+			<br>
+            <h4><b>Conclusion</b></h4>
+            <p>SnapFash was built with the goal of simplifying communication between consumers and sellers with respect to online fashion retail. Based on the results of this project, this attempt to bridge the gap between a user’s expectations and e-commerce search results via image-based recommendation proved to be fairly successful. As seen in most instances, the results are robust and very reasonable given the scope of the available e-commerce data. The object detection phase utilized the YOLO v4 architecture with an average F1 score of 0.8 and IoU of 0.63. The other two unsupervised-learning phases - feature extraction and similarity scoring were comprehensively explored using a variety of methods and significant manual evaluations were leveraged to pick the best approach at each step. It is important to note that due to the nature of the fashion domain, a large aspect of the project involved understanding and wrangling the data. Finding the right thresholds and fine-tuning the models to fit the purposes of DeepFashion and the e-commerce data while ensuring scalability were crucial to the performance of the SnapFash system. </p>
           </div>
           <div class="portfolio-item filter-web3">
             <h3>Popular Attraction/Landmark Recognition Using Google Landmark Dataset</h3>
